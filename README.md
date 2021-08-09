@@ -16,6 +16,10 @@ Book2Braille is a solution that is built to aid people with visual impairments i
 
 Further details of the implementation and our motivation behind the project can be found over [here]().
 
+### Setup
+---
+<img src="media\setup-oakd.jpg" width="500" height="400">
+
 ### To run the program
 ---
 
