@@ -20,7 +20,7 @@ Further details of the implementation and our motivation behind the project can 
 ---
 
 ```Python
-cd main
+cd Book2Braille
 python main.py
 ```
 
