@@ -26,3 +26,11 @@ Further details of the implementation and our motivation behind the project can 
 - skimage
 - speech_recognition
 - pyttsx3
+
+### Tools used:
+---
+
+- Custom trained yoloV3 model
+- Tesseract
+- [Mathpix](https://mathpix.com/)
+- [Latex2Nemeth](https://ctan.org/pkg/latex2nemeth?lang=en)
