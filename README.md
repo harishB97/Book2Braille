@@ -9,3 +9,20 @@ This project was done as part of Opencv AI Competition 2021 (https://opencv.org/
 OAK—D is a spatial AI powerhouse, capable of simultaneously running advanced neural networks while providing depth from two stereo cameras and color information from a single 4K camera in the center.
 
 To buy visit page - https://store.opencv.ai/products/oak-d
+
+### What is Book2Braille?
+
+Book2Braille is a solution that is built to aid people with visual impairments in the field of science. The aim of the solution is to convert equations and texts from scientific books into Braille therby making it accessible for visually impaired people.
+
+Further details of the implementation and our motivation behind our project can be found over here.
+
+### Dependencies (python packages):
+---
+
+- opencv
+- depthai
+- pytesseract
+- scipy
+- skimage
+- speech_recognition
+- pyttsx3
