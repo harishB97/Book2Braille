@@ -1,0 +1,93 @@
+\documentclass[a4paper,12pt]{article}% hvoss
+\usepackage{pstricks-add,fullpage}
+\usepackage{pst-3dplot,pst-solides3d}
+\usepackage{pst-plot,pst-intersect,mathtools}
+
+%\pagestyle{empty}
+\begin{document}
+
+\begin{pspicture}(-0.5,-3.5)(2.5,3.5)
+%\psaxes[]{->}(0,0)(-0.5,-3.5)(3,3.5)
+\psline[linewidth=1mm]{->}(-1,0)(3,0)
+\psline[linewidth=1mm]{->}(-.1,-3.5)(-.1,3.5)
+\psparametricplot[algebraic,
+  linewidth=1.8mm,plotpoints=200,yMaxValue=3]{-2}{2}{t^2|t*(t^2-1)}
+\rput[lb](2.5,1.3){$y^2=(x-1)^2 x$}
+\psline[linewidth=1mm](-0.3,1)(.1,1)
+\rput(-.7,1){$1$}
+\psline[linewidth=1mm](-0.3,2)(.1,2)
+\rput(-.7,2){$2$}
+\psline[linewidth=1mm](-0.3,3)(.1,3)
+\rput(-.7,3){$3$}
+\psline[linewidth=1mm](-0.3,-1)(.1,-1)
+\rput(-.9,-1){$-1$}
+\psline[linewidth=1mm](-0.3,-2)(.1,-2)
+\rput(-.9,-2){$-2$}
+\psline[linewidth=1mm](-0.3,-3)(.1,-3)
+\rput(-.9,-3){$-3$}
+\rput(1,-.7){$1$}
+\psline[linewidth=1mm](2,-.2)(2,.2)
+\rput(2,-.7){$2$}
+\end{pspicture}
+
+\vspace*{2cm}
+
+
+
+
+\psset{Alpha=75,unit=4}
+\begin{pspicture}(-0.6,-1)(2,2)
+\psset{arrowscale=1.5,arrowinset=0,dotstyle=*,dotscale=1.5,drawCoor}
+\pstThreeDCoor[linecolor=black,xMin=-0.5,xMax=2,yMin=-0.5,yMax=2,zMin=-0.5,zMax=2,linewidth=1mm,%
+nameX=$x$,spotX=270,nameY=$y$,nameZ=$z$]
+\pstThreeDLine[linewidth=1.8mm](1.5,0,0)(0,1.5,0)
+\pstThreeDLine[linewidth=1.8mm](0,1.5,0)(0,0,1.5)
+\pstThreeDLine[linewidth=1.8mm](0,0,1.5)(1.5,0,0)
+
+%\pstThreeDDot[linecolor=blue]( 1.5 ,0 , 0)
+%\pstThreeDDot[linecolor=blue]( 0 ,1.5 , 0)
+%\pstThreeDDot[linecolor=blue]( 0 ,0 , 1.5)
+\pstThreeDPut(1.5,0.1,-0.1){$\sqrt{E_s}$}
+\pstThreeDPut(0.2,1.65,0.3){$\sqrt{E_s}$}
+\pstThreeDPut(0.1,.2,1.7){$\sqrt{E_s}$}
+\end{pspicture}
+
+\newpage
+%\vspace*{4cm}
+
+\psset{unit=0.3,viewpoint=20 20 20 rtp2xyz}
+\hspace*{1cm}\begin{pspicture}(-4,-3)(4,8)
+\psSolid[object=grille,base=-2 2 -2 2,linewidth=1mm]
+\axesIIID[axisnames={x,y,z},linewidth=1mm](0,0,0)(3.5,3,3)
+\defFunction[algebraic]{mydensity}(t)
+  {cos(t)}
+  {sin(t)}
+  {10*(t/8)*(1-(t/6.5))^4}
+\psSolid[object=courbe,r=.01,range=-1.3 10.5,linewidth=0.1,resolution=360,linewidth=1.8mm,
+  function=mydensity,linecolor=black,incolor=yellow,,hue=0 1]
+\rput(-2,-8){$(\cos(t),\sin(t),10\cdot (t/8)\cdot(1-(t/6.5))^4)$}
+\end{pspicture}
+
+
+\newpage
+
+\psset{linewidth=1mm}
+\begin{pspicture}(-2,-2)(8,8)
+\psaxes[labels=none,ticks=none]{->}(0,0)(-2,-2)(8,8)[$M$,-90][$Y$,0]
+\psset{linewidth=1.8mm,algebraic}
+\pssavepath{A}{\psplot{-0.5}{8}{4*(1-1.2^(-3*x+1))}}
+\psline(-2,4.2)(8,4.2) \uput[90](5,4.4){$Y=\frac{A}{\alpha+d}$}
+\pssavepath{B}{\psplot{-0.5}{8}{2^(-x/2+3)-2}}
+\pssavepath[linestyle=none]{C}{\psplot{-0.5}{8}{0}}
+\psintersect[name=D, showpoints]{A}{B}\uput{5mm}[-5](D1){$M_3^*,Y^*$}
+\psintersect[name=E, showpoints]{A}{C}\uput{4mm}[-70](E1){$M_c$}
+\psdot(4,0)\uput{4mm}[45](4,0){$M_c^*$} 
+\end{pspicture}
+
+
+
+
+
+
+
+\end{document}
