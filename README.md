@@ -16,7 +16,7 @@ Book2Braille is a solution that is built to aid people with visual impairments i
 
 Further details of the implementation and our motivation behind the project can be found over here.
 
-### To run the model
+### To run the program
 ---
 
 ```Python
