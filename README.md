@@ -12,9 +12,9 @@ To buy visit page - https://store.opencv.ai/products/oak-d
 
 ### What is Book2Braille?
 
-Book2Braille is a solution that is built to aid people with visual impairments in the field of science. The aim of the solution is to convert equations and texts from scientific books into Braille therby making it accessible for visually impaired people.
+Book2Braille is a solution that is built to aid people with visual impairments in the field of science. The aim of the solution is to convert equations and texts from scientific books into Braille thereby making it accessible for visually impaired people.
 
-In depth details of the implementation and our motivation behind the project can be found over [here]().
+In depth details of the implementation and our motivation behind the project can be found over [here](https://drive.google.com/file/d/1fPOmdNyMbynQqpw4tFjVQ4-tJSE5wjyI/view?usp=sharing).
 
 ### Setup
 ---
