@@ -25,7 +25,11 @@ Book2Braille is a solution that is built to aid people with visual impairments i
 
 ### How it works?
 #### Step1: Image capturing and preprocessing
-:arrow_right:
+Capture image :arrow_right: Filter backgroud :arrow_right: Split pages :arrow_right: Uncurve the page :arrow_right: Adaptive threshold
+<img src="media/7ccd7ec245f03e0b3195c3db9bd3d64a9d5a7f34.gif" width="800" height="450" />
+
+#### Step2: Split image into three halves
+
 
 ### To run the program
 ---
